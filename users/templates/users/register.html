@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <div class="container-register">
+        <div class="container-register-card">
+            <form class="form-register" method="POST">
+                {% csrf_token %}
+                <h1 class="form-title">Register</h1>
+                {{ form | crispy }}
+                <button class="button-register" type="submit">Register</button>
+                <a class="come-back" href="{% url 'login' %}">Come back</a>
+            </form>
+        </div> 
+    </div>
+{% endblock %}

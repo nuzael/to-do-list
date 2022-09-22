@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block content %}
+<div class="container-index">
+    <div class="container-title">
+        <h1>To-Do List</h1>
+    </div>
+    <div class="container-login">
+        <img class="checklist-image" src="{% static 'img/checklist-amico.svg' %}" alt="">
+        <div class="container-card">
+            <form class="form-login" method="POST">
+                {% csrf_token %}
+                <h1 class="form-title">Login</h1>
+                {% if form.errors %}
+                    <p class="error-message">username or password not correct!</p>
+                {% endif %}
+                {{ form | crispy }}
+                <button class="button-login" type="submit">Sign In</button>
+                <p class="form-account">Don't have an account yet?</p>
+                <a class="form-register-button" href="{% url 'register' %}"><strong>Create an account</strong></a>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}  

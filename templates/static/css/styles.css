@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+    background: linear-gradient(to right, #eeaeca, #94bbe9)
+}
+
+.header-options {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    column-gap: 22px;
+    margin-top: 8px;
+    margin-right: 8px;
+}
+
+.header-options .header-logout {
+    color: #3B71CA;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.401);
+}
+
+.header-options .header-profile {
+    width: 40px;
+}
+
+main {
+    background-color: white;
+    height: auto;
+    width: 45vw;
+    margin: auto;
+    margin-top: 10vh;
+    margin-bottom: 5vh;
+    padding: 18px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3) ;
+}
+
+.h1-title {
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: gray;
+}
+
+.message {
+    text-align: center;
+}
+
+.come-back {
+    display: block;
+    text-align: center;
+    margin-bottom: 15px;
+    color: gray;
+}
+
+.list-form {
+    display: flex;
+    align-items: center;
+}
+
+.list-form #id_task {
+    width: 38vw;
+    height: 30px;
+    margin-left: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-right: 5px;
+    border: 1px solid;
+    border-color: gray;
+    border-radius: 4px;
+}
+
+.list-form #id_task:focus {
+    outline-color: #3B71CA;
+}
+
+.container-index {
+    background-image: linear-gradient(to bottom right, #eeaeca, #94bbe9);
+    height: 100vh;
+}
+
+.container-index .container-title {
+    font-size: 1.3em;
+    color: white;
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
+}
+
+.container-index .container-login {
+    display: flex;
+}
+
+.container-index .container-login .checklist-image {
+    margin-left: 8%;
+    width: 36%;
+}
+
+.container-index .container-login .container-card {
+    border-radius: 10px;
+    background-color: white; 
+    width: 50vh;
+    height: 54vh;
+    margin-top: 5%;
+    margin-left: 18%;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.form-login {
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+    align-items: center;
+}
+
+.form-login .error-message {
+    font-size: 0.8em;
+    padding: 4px;
+    width: 220px;
+    background-color: #eeaeca;
+    border-radius: 2px;
+    text-align: center;
+}
+
+.form-login .form-title {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: #94bbe9;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.401);
+}
+
+.form-login .textinput {
+    width: 223px;
+}
+
+.form-login .alert {
+    display: none;
+}
+
+.form-login .asteriskField {
+    display: none;
+}
+
+.form-login .button-login {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 93px;
+    padding-right: 93px;
+    margin-bottom: 15px;
+    background-color: #eeaeca;
+    border: none;
+    border-radius: 2px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;;
+}
+
+.form-login .form-account {
+    font-size: 0.9em;
+    margin-bottom: -10px;
+}
+
+.form-login .form-register-button {
+    font-size: 0.9em;
+    color: #3B71CA;
+}
+
+.container-register {
+    display: flex;
+}
+
+.container-register .container-register-card {
+    border-radius: 10px;
+    background-color: white; 
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+    width: 50vh;
+    margin: auto;
+    margin-top: 60px;
+}
+
+.container-register .container-register-card .form-register {
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+    align-items: center;
+}
+
+.container-register .container-register-card .form-register .emailinput {
+    width: 200px;
+}
+
+.container-register .container-register-card .form-register .textinput {
+    width: 200px;
+}
+
+.container-register .container-register-card .form-register .controls > ul {
+    display: none;
+}
+
+.container-register .container-register-card .form-register .help-block {
+    display: none;
+}
+
+.container-register .container-register-card .form-register .form-title {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: #94bbe9;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.401);
+}
+
+.container-register .container-register-card .form-register .button-register {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 77px;
+    padding-right: 77px;
+    margin-bottom: 15px;
+    background-color: #eeaeca;
+    border: none;
+    border-radius: 2px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;;
+}
+
+
+
+.button-container {
+    display: flex;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    justify-content: center;
+    column-gap: 5px;
+}
+
+.button-form {
+    background-color: #54B4D3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-left: 12px;
+    padding-right: 12px;
+    box-shadow: 1px 1px 4px #54B4D3;
+    font-size: 0.9em;
+}
+
+.categories {
+    display: flex;
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.categories > a {
+    color: gray;
+    font-size: 0.9em;
+    padding: 16px;
+}
+
+.categories > a:hover {
+    background-color: #F7F7F7;
+}
+
+.categories .current-page {
+    color: #3B71CA;
+    border-bottom: solid;
+    border-width: 2px;
+}
+
+.list {
+    list-style-type: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+.list .list-items {
+    display: flex;
+    padding: 10px;
+    font-size: 0.9em;
+    color: #5C5C5C;
+    border-radius: 7px;
+    background-color: #F4F6F7;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list .list-items .tasks-container {
+    display: flex;
+    column-gap: 6px;
+}
+
+.list .list-items .tasks-container .input-item {
+    width: 25px;
+}
+
+.list .list-items .tasks-container .checked-item {
+    text-decoration: line-through;
+}
+
+.list .list-items .icons-container {
+    display: flex;
+    column-gap: 17px;
+}
+
+.list .list-items .icons-container .icons {
+    height: 16px;
+}

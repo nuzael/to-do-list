@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}
+<title>Tasks | Active</title>
+{% endblock %}
+
+{% block header %}
+<header class="header-options">
+    <a class="header-logout" href="{% url 'logout' %}">Logout</a>
+    <a href=""><img class="header-profile" src="{% static 'img/user.png' %}" alt="profile"></a>
+</header>
+{% endblock %}
+
+{% block content %}
+<main>
+    <form class="list-form" action="{% url 'all' %}" method="POST">
+        {% csrf_token %}
+        {{ form.task }}
+        <button class="button-form" type="submit">ADD</button>
+    </form>
+    
+    <div class="categories">
+        <a href="{% url 'all' %}">ALL</a>
+        <a class="current-page" href="{% url 'active' %}">ACTIVE</a>
+        <a href="{% url 'completed' %}">COMPLETED</a>
+    </div>
+    
+    <ul class="list">
+        {% for task in tasks %}
+            <li class="list-items">
+                {% if task.completed %}
+                    <div class="tasks-container">
+                        <input class="input-item" type="checkbox" checked name="">
+                        <p class="checked-item">{{ task.task }}</p>
+                    </div>
+                    <div class="icons-container">
+                        <a href="{% url 'edit' task.pk %}"><img class="icons" src="{% static 'img/edit.png' %}" alt="edit"></a>
+                        <a href="{% url 'delete' task.pk %}"><img class="icons" src="{% static 'img/delete.png' %}" alt="delete"></a>
+                    </div>
+                {% else %}
+                    <div class="tasks-container">
+                        <input class="input-item" type="checkbox" name="" id="">
+                        <p>{{ task.task }}</p>
+                    </div>
+                    <div class="icons-container">
+                        <a href="{% url 'edit' task.pk %}"><img class="icons" src="{% static 'img/edit.png' %}" alt="edit"></a>
+                        <a href="{% url 'delete' task.pk %}"><img class="icons" src="{% static 'img/delete.png' %}" alt="delete"></a>
+                    </div>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+</main>
+{% endblock %}

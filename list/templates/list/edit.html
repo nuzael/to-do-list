@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+<title>Tasks | Edit</title>
+{% endblock %}
+
+{% block header %}
+<header class="header-options">
+    <a class="header-logout" href="{% url 'logout' %}">Logout</a>
+    <a href=""><img class="header-profile" src="{% static 'img/user.png' %}" alt="profile"></a>
+</header>
+{% endblock %}
+
+{% block content %}
+<main>
+    <h1 class="h1-title">Edit Task</h1>
+    <form class="list-form" method="POST">
+        {% csrf_token %}
+        {{ form.task }}
+        <button class="button-form" type="submit">Edit</button>
+    </form>
+    <a class="come-back" href="{% url 'all' %}">Come back</a>
+</main>
+{% endblock %}
