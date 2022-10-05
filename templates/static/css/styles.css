@@ -66,7 +66,7 @@ main {
 }
 
 .list-form #id_task {
-    width: 38vw;
+    width: 37.5vw;
     height: 30px;
     margin-left: 20px;
     margin-top: 15px;
@@ -79,6 +79,11 @@ main {
 
 .list-form #id_task:focus {
     outline-color: #3B71CA;
+}
+
+.list-form #id_completed {
+    height: 30px;
+    width: 30px;
 }
 
 .container-index {
@@ -226,8 +231,6 @@ main {
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;;
 }
 
-
-
 .button-container {
     display: flex;
     margin-top: 15px;
@@ -295,10 +298,6 @@ main {
 .list .list-items .tasks-container {
     display: flex;
     column-gap: 6px;
-}
-
-.list .list-items .tasks-container .input-item {
-    width: 25px;
 }
 
 .list .list-items .tasks-container .checked-item {

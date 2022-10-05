@@ -14,9 +14,10 @@
 
 {% block content %}
 <main>
-    <h1 class="h1-title">Edit Task</h1>
+    <h1 class="h1-title">Edit</h1>
     <form class="list-form" method="POST">
         {% csrf_token %}
+        {{ form.completed }}    
         {{ form.task }}
         <button class="button-form" type="submit">Edit</button>
     </form>

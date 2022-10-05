@@ -58,7 +58,7 @@ class CompletedList(LoginRequiredMixin, CreateView, ListView):
 
 class TaskUpdate(LoginRequiredMixin, UpdateView):
     model = ToDo
-    fields = ['task']
+    fields = ['task', 'completed']
     context_object_name = 'tasks'
     template_name = 'list/edit.html'
     success_url = reverse_lazy('all')

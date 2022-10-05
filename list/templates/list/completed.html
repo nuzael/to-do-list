@@ -32,7 +32,6 @@
             <li class="list-items">
                 {% if task.completed %}
                     <div class="tasks-container">
-                        <input class="input-item" type="checkbox" checked name="">
                         <p class="checked-item">{{ task.task }}</p>
                     </div>
                     <div class="icons-container">
@@ -41,7 +40,6 @@
                     </div>
                 {% else %}
                     <div class="tasks-container">
-                        <input class="input-item" type="checkbox" name="" id="">
                         <p>{{ task.task }}</p>
                     </div>
                     <div class="icons-container">
